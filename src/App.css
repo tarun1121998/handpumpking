@@ -1,0 +1,17 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+
+.section-padding{
+  margin: 90px 0px;
+}
+:root{
+  --dark-blue : #203066;
+  --light-blue : #D5D8E2;
+  --purple : #4C40ED;
+  --dark-grey : #465380;
+}
+

@@ -1,0 +1,35 @@
+.client-head{
+    text-align: center;
+}
+.client-head h3{
+    font-weight: 600;
+    font-size: 40px;
+    color: var(--dark-blue);
+}
+.client-head p{
+    font-weight: 600;
+    color: var(--dark-grey);
+}
+.client-img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+.client-box{
+    height: auto;
+width: 450px;
+/* box-shadow: rgba(0, 0, 0, 0.079) 0px 3px 6px, rgba(0, 0, 0, 0.046) 0px 3px 6px; */
+text-align: center;
+padding: 20px;
+border-radius: 20px;
+}
+.client-box img{
+    width: 110px !important;
+    height: 110px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.rating-stars{
+    margin-bottom: 20px;
+}

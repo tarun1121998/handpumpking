@@ -1,0 +1,42 @@
+.download-box{
+    height: 400px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: var(--dark-blue);
+    color: white;
+    margin-top: 200px;
+}
+.app-img img{
+    width: 100%;
+    height: auto;
+    margin-top: -70px;
+}
+.download-content{
+    padding: 20px 40px;
+
+}
+.download-content h2{
+    font-weight: 600;
+}
+.download-content p{
+    padding: 10px 0;
+    line-height: 2;
+}
+.qr-img{
+    height: 100px;
+    width: 100px;
+}
+.app-links{
+    display: flex;
+   
+}
+.google-play{
+  
+    width: 100px;
+    height: 50px;
+}
+.apple-store{
+
+    width: 120px;
+    height: 140px;
+}

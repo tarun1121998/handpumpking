@@ -1,0 +1,70 @@
+.profile-blue-bg{
+    height: 100vh;
+    width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.profile-banner{
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+}
+.profile-blue-bg img{
+    height: 450px;
+    width: 420px;
+}
+.profile-white-bg{
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+}
+
+.profile-white-bg h3{
+font-weight: 600;
+font-size: 35px;
+color: var(--dark-blue);
+padding: 40px 0 0 0;
+}
+.profile-white-bg p{
+    font-weight: 600;
+    color: var(--dark-grey);
+    padding-bottom: 30px;
+}
+.profile-detail{
+    margin-top: 40px;
+    text-align: center;
+}
+.profile-info{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    background-color: rgba(205, 205, 205, 0.42);
+    height: 50px;
+    width: 400px;
+    border-radius: 10px;
+    margin: 20px 10px;
+    
+}
+.profile-info i {
+    font-size: 22px;
+    margin-right: 20px;
+    padding: 15px;
+    color: var(--dark-blue);
+}
+.profile-info p{
+    font-weight: 600;
+    color: var(--dark-blue);
+    padding: 15px 0 0 0;
+}
+/* ---------- complaint history ------------- */
+.complaint-history-area{
+    margin-top: 40px;
+}
+.complaint-box{
+    background-color: rgba(205, 205, 205, 0.42);
+    height: 140px;
+    width: 240px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}

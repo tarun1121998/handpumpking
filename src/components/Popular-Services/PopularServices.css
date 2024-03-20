@@ -1,0 +1,35 @@
+.popular-service-head h3{
+    font-weight: 600;
+    font-size: 40px;
+    color: var(--dark-blue);}
+    
+    .popular-service-head p{
+        font-weight: 600;
+        color: var(--dark-grey);
+    }
+    
+    .service-box{
+    height: auto;
+    width: 100%;
+    }
+    .service-box img{
+        width: 100%;
+        padding: 10px;
+    }
+    .card-address{
+        display: flex;
+        justify-content: space-between;
+    }
+    .popular-service-btn {
+        text-align: right;
+    }
+    .popular-service-btn button{
+        border: none;
+     padding: 5px 10px;
+     background-color: var(--dark-blue);
+     color: white;
+     font-weight: 500;
+     font-size: 18px;
+     border-radius: 10px;
+     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }

@@ -1,0 +1,53 @@
+.mp-map{
+    text-align: center;
+}
+.mp-map h3{
+    font-weight: 600;
+font-size: 32px;
+color: var(--dark-blue);
+}
+
+.map-img{
+background: #e0e0e0;
+border: 4px dashed #bbbbbbab;
+border-radius: 28px;
+padding: 16px 36px 17px 35px;
+position: relative;
+
+}
+.map-img img{
+    height: auto;
+    width: 100%;
+}
+.map-details{
+position: relative;
+    top: 89px;
+    text-align: center;
+}
+.map-details h3{
+    font-weight: 600;
+    font-size: 32px;
+    color: var(--dark-blue);
+}
+
+.map-detail-area{
+    border: 2px dashed rgb(255 255 255);
+    margin: 113px 0px;
+    padding: 0px 37px;
+    position: relative;
+    right: 58px;
+    border-radius: 20px;
+    background: var(--dark-blue);
+}
+.tags{
+    text-align: right;
+  
+}
+.tags img{
+    width: 12%;
+}
+.map-content h6{
+ color: white;
+ line-height: 1.5;
+ font-size: 18px;
+}

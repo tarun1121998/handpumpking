@@ -1,0 +1,55 @@
+.feature-service-head h3{
+    font-weight: 600;
+    font-size: 40px;
+    color: var(--dark-blue);}
+    
+    .feature-service-head p{
+        font-weight: 600;
+        color: var(--dark-grey);
+    }
+    
+    .service-box{
+    height: auto;
+    width: 100%;
+    }
+    .service-box img{
+        width: 100%;
+        padding: 10px;
+    }
+    .card-address{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* ---------------- offer banner css ------------- */
+
+    .offer-blue-box{
+        background-color: var(--dark-blue);
+        height: 400px;
+        width: 100%;
+        border-radius: 20px;
+        margin-top: 200px;
+        box-shadow: rgba(10, 14, 111, 0.642) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+    .offer-man{
+        height: 550px;
+        width: 500px;
+   margin-top: -150px;
+    }
+    .offer-content{
+        padding: 40px;
+        color: white;
+
+    }
+    .offer-content h1{
+        font-weight: 600;
+        padding-bottom: 20px;
+    }
+    .offer-btn{
+        border: none;
+        background-color: var(--light-blue);
+        color: var(--dark-blue);
+        border-radius: 10px;
+        padding: 10px 5px ;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }

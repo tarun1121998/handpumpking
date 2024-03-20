@@ -1,0 +1,131 @@
+
+.welcome-head h1{
+    font-weight: 600;
+    font-size: 45px;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+}
+.welcome-head p{
+    color: var(--dark-grey);
+    font-weight: 600;
+}
+
+.carousel-img{
+    width: 100%;
+    height:450px;
+    overflow: hidden;
+}
+
+.detail-box-head{
+text-align: center;
+}
+.detail-box-head h3{
+    font-weight: 600;
+font-size: 30px;
+color: var(--dark-blue);
+
+
+}
+
+.blink-me {
+    animation: blink-animation 1s infinite;
+    -webkit-animation: blink-animation 1s infinite;
+  }
+  @keyframes blink-animation {
+    0%, 49.9% {
+      opacity: 1; /* Visible */
+    }
+    50%, 100% {
+      opacity: 0; /* Invisible */
+    }
+  }
+  
+  @-webkit-keyframes blink-animation {
+    0%, 49.9% {
+      opacity: 1; /* Visible */
+    }
+    50%, 100% {
+      opacity: 0; /* Invisible */
+    }
+  }
+.details-area{
+    background-image: url(../../assets/detailsBg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px ;
+    background-position: center;
+}
+.details-boxes{
+    display: flex;
+}
+.details-boxes2{
+display: flex;
+}
+.detail-box-1{
+   height: 100px;
+   width: 280px;
+   background-color: var(--dark-blue);
+   border-radius: 30px;
+   padding: 15px;
+   margin-left: 10px;
+   margin-bottom: 20px;
+}
+.detail-box-2{
+    height: 100px;
+   width: 280px;
+   background-color: rgb(130, 210, 9);
+   border-radius: 30px;
+   padding: 15px;
+   margin-left: 10px;
+   margin-bottom: 20px; 
+}
+.inbox-img img{
+    width: 100%;
+    
+}
+.details-text{
+    color: white;
+font-weight: 600;
+}
+
+/* ---- Detail card ---- */
+.detail-card-1{
+    height: 150px;
+   width: 200px;
+   background-color: rgb(219, 27, 177);
+   border-radius: 10px;
+   padding: 15px;
+   margin-left: 10px;
+   margin-bottom: 20px;
+}
+.detail-card-2{
+    width: 200px;
+    background-color: orangered;
+    border-radius: 10px;
+    padding: 15px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+.detail-card-3{
+    width: 200px;
+    background-color: var(--dark-grey);
+    border-radius: 10px;
+    padding: 15px;
+    margin-left: 10px;
+    margin-bottom: 20px; 
+}
+.detail-card-4{
+    width: 200px;
+    background-color: rgb(130, 210, 9);
+    border-radius: 10px;
+    padding: 15px;
+    margin-left: 10px;
+    margin-bottom: 20px; 
+}
+.inbox-card-icon{
+    text-align: center;
+}
+.inbox-icon{
+    height: 60px;
+    width: 60px;
+}

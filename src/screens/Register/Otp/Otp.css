@@ -1,0 +1,14 @@
+.otp-area{
+    text-align: center;
+    padding: 20px;
+}
+.otp-area p{
+    font-weight: 600;
+    color: var(--dark-blue);
+    margin-bottom: 40px;
+}
+.verify-otp-btn{
+    width: 100%;
+    background-color: var(--dark-blue);
+    color: white;
+}
