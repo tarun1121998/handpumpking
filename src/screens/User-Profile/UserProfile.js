@@ -8,6 +8,10 @@ import Tabs from "react-bootstrap/Tabs";
 import Footer from "../../directives/Footer/Footer";
 
 const UserProfile = () => {
+
+ const username = localStorage.getItem("username");
+ const useremail = localStorage.getItem("email");
+ const userphonenumber = localStorage.getItem("phoneNumber");
   return (
     <div>
       <Nav />
@@ -43,7 +47,7 @@ const UserProfile = () => {
                             <i class="fa-solid fa-user"></i>
                           </Col>{" "}
                           <Col lg={10}>
-                            <p>Shristi Sharma</p>
+                            <p>{username}</p>
                           </Col>
                         </Row>
                       </div>
@@ -55,7 +59,7 @@ const UserProfile = () => {
                             <i class="fa-solid fa-envelope"></i>{" "}
                           </Col>
                           <Col lg={10}>
-                            <p>shrish@gmail.com</p>
+                            <p>{useremail}</p>
                           </Col>
                         </Row>
                       </div>
@@ -66,7 +70,7 @@ const UserProfile = () => {
                             <i class="fa-solid fa-phone-volume"></i>{" "}
                           </Col>{" "}
                           <Col lg={10}>
-                            <p>9876543212</p>
+                            <p>{userphonenumber}</p>
                           </Col>{" "}
                         </Row>
                       </div>

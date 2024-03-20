@@ -3,6 +3,8 @@ import "./nav.css";
 import { Link } from "react-router-dom";
 import Dropdown from 'react-bootstrap/Dropdown';
 const Nav = () => {
+  const Loginid = localStorage.getItem("userid");
+
   return (
     <>
       <header class="header">
@@ -22,7 +24,10 @@ const Nav = () => {
           <Link to="/Register"> Register</Link>
           </li>
           <li>
-        <Link to="/UserProfile">Profile</Link>  
+            {Loginid ?
+            <Link to="/UserProfile">Profile</Link> 
+            :<Link to="/userlogin">Login</Link> 
+            }
           </li>
        <li className="app-dropdown">  <Dropdown>
       <Dropdown.Toggle variant="success" id="dropdown-basic">

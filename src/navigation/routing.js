@@ -7,6 +7,7 @@ import Otp from "../screens/Register/Otp/Otp";
 import Register from "../screens/Register/Register";
 import RegisterOtp from "../components/RegisterOtp/RegisterOtp";
 import UserProfile from "../screens/User-Profile/UserProfile";
+import UserLogin from "../screens/User-Login/UserLogin";
 
 // ScrollToTop component
 const ScrollToTop = () => {
@@ -31,6 +32,7 @@ function NavRoutes() {
           <Route path="/Register" element={<Register/>}/>
           <Route path="/registerOtp" element={<RegisterOtp/>}/>
           <Route path="/userprofile" element={<UserProfile/>}/>
+          <Route path="/userlogin" element={<UserLogin/>}/>
         </Routes>
       </BrowserRouter>
     </>
