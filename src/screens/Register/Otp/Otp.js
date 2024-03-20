@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import OTPInput, { ResendOTP } from "otp-input-react";
 
-const Otp = (props) => {
+const  Otp = (props) => {
   const [OTP, setOTP] = useState("");
 const [otpVerified, setOtpVerified] = useState(false);
 
@@ -79,18 +79,5 @@ const [otpVerified, setOtpVerified] = useState(false);
 
 // ----------------- OTP Npm Pacakage ---------------- //
 
-function App() {
-  const [modalShow, setModalShow] = React.useState(false);
-
-  return (
-    <>
-      <Button variant="primary" onClick={() => setModalShow(true)}>
-        Launch vertically centered modal
-      </Button>
-
-      <Otp show={modalShow} onHide={() => setModalShow(false)} />
-    </>
-  );
-}
 
 export default Otp;
