@@ -1,0 +1,92 @@
+p {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.page-area {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-page {
+  border: 1px solid rgb(9, 27, 79);
+  height: auto;
+  width: 60%;
+}
+.blue-head h1 {
+  background-color: rgb(9, 27, 79);
+  color: white;
+  text-align: center;
+}
+.heading-details {
+  padding: 10px 30px;
+}
+.second-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.second-heading h4 {
+  color: rgb(9, 27, 79);
+  font-weight: 600;
+  padding: 10px;
+  padding: 0 30px;
+  text-align: center;
+}
+.second-heading p{
+    text-align: right;
+}
+/* --------- table style -------- */
+.form-detail {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* padding: 0 30px ; */
+}
+.form-detail p {
+  flex: 1;
+  margin: 0;
+}
+.content-table {
+  padding-top: 20px;
+}
+.content-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.content-table th,
+.content-table td {
+  padding: 5px;
+  border: 1px solid #0000004e;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ----- Specific Column Style ----- */
+.content-table th:nth-child(1),
+.content-table td:nth-child(1) {
+  width: 50px;
+}
+.content-table th:nth-child(2),
+.content-table td:nth-child(2) {
+  max-width: 300px;
+}
+
+.content-table th:nth-child(4),
+.content-table td:nth-child(4) {
+  width: 160px;
+}
+.content-table td:nth-child(4){
+    border: none;
+}
+
+.footer-info {
+  padding: 20px;
+}
+.form-detail p{
+    padding-bottom: 15px;
+}
