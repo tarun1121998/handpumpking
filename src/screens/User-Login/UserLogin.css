@@ -1,0 +1,64 @@
+.login-bg{
+    background-image: url(../../assets/loginBg.jpg);
+    height: auto;
+    width: 100%;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 60px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-area{
+    background-color: rgba(180, 179, 179, 0.634);
+    /* padding: 40px; */
+    width: 40%;
+    box-shadow: rgba(0, 0, 0, 0.82) 0px 3px 6px, rgba(0, 0, 0, 0.113) 0px 3px 6px;
+    border-radius: 20px;
+}
+.login-fields{
+    text-align: center;
+  
+}
+.login-fields h4{
+    padding: 40px 0 0 0;
+    color:white;
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.login-fields form{
+    padding: 60px;
+    border-radius: 10px;
+   
+}
+.login-fields form input{
+    width: 100%;
+    height: 40px;
+    background-color: hsla(0, 0%, 100%, 0.956);
+    border: 1px solid rgb(124, 123, 123);
+    border-radius: 10px;
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: #181717;
+    padding: 0 15px;
+}
+.continue-login-btn{
+    width: 100%;
+    background-color: rgb(255, 208, 0);
+    color: white;
+    padding: 7px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    box-shadow: rgba(0, 0, 0, 0.82) 0px 3px 6px, rgba(0, 0, 0, 0.113) 0px 3px 6px;
+    
+  }
+  .forgot-pass p{
+    color: white;
+    font-weight: 600;
+  }
