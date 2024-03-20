@@ -11,7 +11,7 @@ const MapInfo = () => {
         <Row>
           {/* ----- Map Image ---- */}
           <Col lg={6}>
-            <div className="mp-map">
+            <div className="mp-map" style={{ visibility: "visible", animationName: "bounceInLeft" }}>
               <h3> Map Of Madhya Pradesh</h3>
               <div className="map-img">
                 <img src={mpMap} />
