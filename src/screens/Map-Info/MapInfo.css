@@ -51,3 +51,16 @@ position: relative;
  line-height: 1.5;
  font-size: 18px;
 }
+.mp-map{
+    animation: fade-in-left 2s ease infinite;
+}
+@keyframes mp-map {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
