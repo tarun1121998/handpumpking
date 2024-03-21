@@ -9,23 +9,29 @@ import NewNavbar from "../../directives/Header/NewNavbar";
 // import Otp from "../Register/Otp/Otp";
 
 const Home = () => {
+  const page_consumer =useNavigate()
   const [issueTypes, setIssueTypes] = useState([]);
   const [category, setCategory] = useState([]);
   const [selectService, setSelectService] = useState([]);
-  const [formData, setFormData] = useState({
-    name: "",
-    service: "",
-    phone: "",
-    address: "",
-    notes: "",
-  });
+  const [issueTypesid, setIssueTypesid] = useState('');
+  const [categoryid, setCategoryid] = useState('');
+  const [selectServiceid, setSelectServiceid] = useState('');
+const [address,setAddress]=useState('')
+const [long,setLong]=useState('')
+const [Lati,setLati]=useState('')
+const [phone,setPhone]=useState('')
+const [name,setName]=useState('')
+const [notes,setNotes]=useState('')
+const [Image,setImage]=useState(null)
 
+const UserId = localStorage.getItem("userid")
   useEffect(() => {
     fetch("https://handpumpking.digiatto.online/api/issue")
       .then((response) => response.json())
       .then((data) => {
         if (data.status === "200") {
           setIssueTypes(data.types);
+          console.log("dataid" ,data);
         } else {
           console.error("Error fetching data");
         }
@@ -64,38 +70,99 @@ const Home = () => {
       });
   }, []);
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+ 
+
+  
+  const YOUR_API_KEY = `AIzaSyDyeucASg8epjdag7y94MK2F7xJoA5P7QQ`;
+
+  const handleClick = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        async (position) => {
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+          const address = await getAddressFromCoordinates(latitude, longitude);
+          console.log("Latitude:", latitude);
+          console.log("Longitude:", longitude);
+          console.log("Address:", address);
+          setAddress(address)
+          setLong(longitude)
+          setLati(latitude)
+
+        },
+        (error) => {
+          console.error("Error getting geolocation:", error);
+        }
+      );
+    } else {
+      console.error("Geolocation is not supported by this browser.");
+    }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    fetch("https://handpumpking.digiatto.online/api/complaint", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        ...formData,
-        issue_type: "1",
-        client: "1",
-        category: "1",
-      }),
-    })
-    .then((response)=> response.json())
-    .then((data)=> {
-      if(data.status === "200"){
-    console.log("Complaint sumitted successfully");
-    setFormData({
-      
-    })    
+  const getAddressFromCoordinates = async (latitude, longitude) => {
+    try {
+      const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${YOUR_API_KEY}`);
+      if (!response.ok) {
+        throw new Error("Failed to fetch address from coordinates.");
       }
-    })
+      const data = await response.json();
+      const address = data.results[0].formatted_address;
+      return address;
+    } catch (error) {
+      console.error("Error fetching address:", error);
+      return null;
+    }
   };
+
+
+  const ConsumerComplaint = async (e)=>{
+    try {
+      const formDataToSend = new FormData();
+      formDataToSend.append('phone',phone);
+      formDataToSend.append('name', name);
+      formDataToSend.append('image',Image );
+      formDataToSend.append('notes', notes);
+      formDataToSend.append('category', categoryid);
+      formDataToSend.append('service', selectServiceid);
+      formDataToSend.append('issue_type', issueTypesid);
+      formDataToSend.append('client',UserId );
+      formDataToSend.append('address', address);
+      formDataToSend.append('lon', long);
+      formDataToSend.append('lat', Lati);
+     
+  
+      const response = await fetch(
+        "https://handpumpking.digiatto.online/api/complaint",
+        {
+          method: "POST",
+          body: formDataToSend,
+        }
+      );
+  
+  
+      if (!response.ok) {
+        throw new Error("Network response was not ok: " + response.status);
+      }
+      const data = await response.json();
+      page_consumer('/')
+      console.log("Form data submitted successfully", data);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+
+  const handlerissue =(e)=>{
+    setIssueTypesid(e.target.value)
+  }
+  const handlerservise =(e)=>{
+    setSelectServiceid(e.target.value)
+  }
+  const handlercate =(e)=>{
+    setCategoryid(e.target.value)
+  }
+  const Imagehandler = (event)=>{
+    setImage(event.target.files[0])
+  }
 
   return (
     <div>
@@ -149,52 +216,34 @@ const Home = () => {
                               ))}
                             </select>
 
-                            {/* --------------------- Select Issue ------------------ */}
-                            <select>
-                              <option value="option1">Select Issue</option>
+                          {/* --------------------- Select Issue ------------------ */}
+                          <select value={issueTypesid} onChange={handlerissue}>
+                            <option >Select Issue</option>
 
-                              {issueTypes.map((issue) => (
-                                <option key={issue.id} value={issue.type}>
-                                  {issue.type}
-                                </option>
-                              ))}
-                            </select>
-                          </Col>
-                          {/* --------------- Select State -------------- */}
-                          <Col lg={6}>
-                            <select>
-                              <option value="option1">Select State</option>
-                              <option value="option2">Option 1</option>
-                              <option value="option3">Option 2</option>
-                              <option value="option3">Option 3</option>
-                            </select>
-                          </Col>
+                            {issueTypes.map((issue) => (
+                              <option key={issue.id} value={issue.id}>
+                                {issue.type}
+                              </option>
+                            ))}
+                          </select>
 
-                          {/* --------------- Select District -------------- */}
-                          <Col lg={6}>
-                            <select>
-                              <option value="option1">Select District</option>
-                              <option value="option2">Option 1</option>
-                              <option value="option3">Option 2</option>
-                              <option value="option3">Option 3</option>
-                            </select>
-                          </Col>
 
-                          {/* ------------- Select Zone ------------ */}
-                          <Col lg={6}>
-                            <select>
-                              <option value="option1">Select Zone</option>
-                              <option value="option2">Option 1</option>
-                              <option value="option3">Option 2</option>
-                              <option value="option3">Option 3</option>
-                            </select>
-                          </Col>
-                          <Col lg={6}>
-                            <input
-                              type="tel"
-                              placeholder="+91-00000000"
-                            ></input>
-                          </Col>
+                          <input
+                            type="file"
+                            name="file"
+                            placeholder="Your Name :"
+                            onChange={Imagehandler}
+                          />
+
+                          <input
+                            type="Number"
+                            name="subject"
+                            placeholder="Phone Number"
+                            value={phone}
+                            onChange={(e)=>setPhone(e.target.value)}
+                          />
+                        </Col>
+
 
                           <Col lg={12}>
                             <input

@@ -46,13 +46,13 @@
     font-size: 16px;
     color: #6c6c6c;
   }
-  .contact-form form {
+  .contact-form.consumer {
     background-color: rgba(85, 86, 102, 0.392);
     padding: 60px;
     margin-bottom: 200px;
     border-radius: 10px;
   }
-  .contact-form form select {
+  .contact-form .consumer select {
     width: 100%;
     height: 40px;
     background-color: hsla(0, 0%, 100%, 0.956);
@@ -71,8 +71,8 @@
     color: #142935;
     margin-bottom: 5px;
   }
-  .contact-form form input,
-  .contact-form form textarea {
+  .contact-form .consumer input,
+  .contact-form .consumer textarea {
     width: 100%;
     height: 40px;
     background-color: hsla(0, 0%, 100%, 0.956);
@@ -83,12 +83,12 @@
     color: #1b1a1a;
     padding: 0 15px;
   }
-  .contact-form form textarea {
+  .contact-form .consumer textarea {
     height: 100px;
     padding: 20px 15px;
     resize: none;
   }
-  .contact-form form input[type="submit"] {
+  .contact-form .consumer input[type="submit"] {
     background: var(--dark-blue);
     border-radius: 10px;
     border: none;
