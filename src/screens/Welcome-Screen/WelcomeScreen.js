@@ -19,6 +19,7 @@ import DownloadApp from "../../components/Download-App/DownloadApp";
 import Footer from "../../directives/Footer/Footer";
 import Carousel from "react-bootstrap/Carousel";
 import MapInfo from "../Map-Info/MapInfo";
+import { Link } from "react-router-dom";
 
 const WelcomeScreen = () => {
   const [bannerImages, setBannerImages] = useState([]);
@@ -52,7 +53,8 @@ const WelcomeScreen = () => {
       {/* -------------------- Carousel End ---------------- */}
 
       <div class="marquee">
-        <p>Scrolling Text Marquee - A Simple CSS Demonstration</p>
+        <p>Register a complaint about your hand pump repair by clicking here.
+       <Link to="/ConsumerComplaint"> <button>Click here</button> </Link>  </p>
     </div>
 
 

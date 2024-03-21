@@ -29,6 +29,8 @@
   height: 40px;
   width: 100%;
   white-space: nowrap;
+  text-align: center;
+  align-items: center;
 }
 
 .marquee p {
@@ -42,6 +44,21 @@
   animation: scroll-left 25s linear infinite;
   font-size: 16px;
   font-weight: 600;
+ 
+  
+}
+.marquee button{
+  border: none;
+  border-radius: 30px;
+  background-color: rgb(255, 4, 238);
+  color: white;
+  font-weight: 600;
+  height: auto;
+  align-items: center;
+  text-align: center;
+}
+.marquee button:hover{
+  background-color: rgb(237, 41, 224);
 }
 
 @keyframes scroll-left {
