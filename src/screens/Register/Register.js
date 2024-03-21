@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./Register.css";
-import Nav from "../../directives/Header/Nav";
 import { Col, Container, Modal, Row, Button } from "react-bootstrap";
 import registerImg from "../../assets/registerImg.jpg";
 import Footer from "../../directives/Footer/Footer";
 import { useNavigate } from "react-router-dom";
+import NewNavbar from "../../directives/Header/NewNavbar";
 
 const Register = () => {
 const navigatepage =useNavigate()
@@ -158,11 +158,9 @@ const RegisterOtpVerify = async (e)=>{
 }
 
 
-
- 
   return (
     <div>
-      <Nav />
+          <NewNavbar/>   
       <div className="section-padding">
         <Container>
           <div className="register-area">

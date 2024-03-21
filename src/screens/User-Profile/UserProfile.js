@@ -1,11 +1,11 @@
 import React from "react";
 import "./UserProfile.css";
-import Nav from "../../directives/Header/Nav";
 import { Col, Container, Row } from "react-bootstrap";
 import UserProfileImg from "../../assets/userProfileImg.avif";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import Footer from "../../directives/Footer/Footer";
+import NewNavbar from "../../directives/Header/NewNavbar";
 
 const UserProfile = () => {
 
@@ -14,7 +14,7 @@ const UserProfile = () => {
  const userphonenumber = localStorage.getItem("phoneNumber");
   return (
     <div>
-      <Nav />
+       <NewNavbar/>
       <div className="section-padding">
         <Container>
         <div className="profile-banner">

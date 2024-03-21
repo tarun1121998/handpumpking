@@ -10,14 +10,14 @@ const Footer = () => {
         <Container>
           <div>
             <Row>
-              <Col lg={3} md={4}>
+              <Col lg={3} md={4} sm={4}>
                 <h4 className="footer-head">HandPump Logo</h4>
                 <p>
                   Lorem ipsum dolor sit consectetur adipiscing elit, sed do
                   eiusmod tempor commodo consequat.
                 </p>
               </Col>
-              <Col lg={3} md={4}>
+              <Col lg={3} md={4} sm={4}>
                 <h4 className="footer-head">Quick Link</h4>
                 <div className="footer-list">
                   <ul>
@@ -28,7 +28,7 @@ const Footer = () => {
                   </ul>
                 </div>
               </Col>
-              <Col lg={3} md={4}>
+              <Col lg={3} md={4} sm={4}>
                 <h4 className="footer-head">Contact Us </h4>
                 <div className="footer-list">
                   <ul>
@@ -46,7 +46,7 @@ const Footer = () => {
                   </ul>
                 </div>
               </Col>
-              <Col lg={3} md={4}>
+              <Col lg={3} md={4} sm={4}>
                 <h4 className="footer-head">Follow Us</h4>
                 <div className="social-links">
                   <i class="fa-brands fa-facebook"></i>

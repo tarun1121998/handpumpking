@@ -9,10 +9,7 @@
     color: var(--dark-grey);
     font-weight: 600;
 }
-.banner-carousel{
-  margin-top: 60px;
-  
-}
+
 .banner-carousel img{
   height: 340px;
 }
@@ -213,6 +210,9 @@ font-weight: 600;
 
 .banner-carousel img{
   height: 280px;
+}
+.details-text h5{
+  font-size: 15px;
 }
 
 }

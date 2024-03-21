@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Nav from "../../directives/Header/Nav";
+
 import { Col, Container, Row } from "react-bootstrap";
 import "./ConsumerComplaint.css";
 import Footer from "../../directives/Footer/Footer";
+import NewNavbar from "../../directives/Header/NewNavbar";
 
 // import { Link } from "react-router-dom";
 // import Otp from "../Register/Otp/Otp";
@@ -98,9 +99,9 @@ const Home = () => {
 
   return (
     <div>
-      <Nav />
-    
-        <div className="section-padding">
+  
+  <NewNavbar/>
+     
           <div className="complaint-form-head">
             <h2>Submit Your Complaint Online</h2>
             <p>
@@ -217,7 +218,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
+     
      
       <Footer />
     </div>

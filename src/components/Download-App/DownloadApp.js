@@ -10,7 +10,7 @@ const DownloadApp = () => {
     <div>
         <div className='download-box'>
 <Row>
-    <Col lg={6} md={6}>
+    <Col lg={6} md={6} sm={6}>
     <div className='download-content'>
 <h2>Download Our App</h2>
 
@@ -23,7 +23,7 @@ const DownloadApp = () => {
 </div>
 </div>
 </Col>
-    <Col lg={6} md={6}>
+    <Col lg={6} md={6} sm={6}>
         <div className='app-img'>
         <img src={appImg}/>
         </div>

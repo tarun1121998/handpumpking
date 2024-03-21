@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./UserLogin.css";
-import Nav from "../../directives/Header/Nav";
 import { Link } from "react-router-dom";
 import { Col, Container, Row } from "react-bootstrap";
 import loginPageImg from "../../assets/loginPageImg.jpg"
 import Footer from "../../directives/Footer/Footer";
+import NewNavbar from "../../directives/Header/NewNavbar";
 
 const UserLogin = () => {
   const [phone, setPhone] = useState("");
@@ -36,7 +36,7 @@ const UserLogin = () => {
   };
   return (
     <div>
-      <Nav />
+         <NewNavbar/>
       <Container>
 <div className="section-padding">
       <div className="login-bg">
