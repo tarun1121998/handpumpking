@@ -99,7 +99,7 @@ const Home = () => {
   return (
     <div>
       <Nav />
-      <Container>
+    
         <div className="section-padding">
           <div className="complaint-form-head">
             <h2>Submit Your Complaint Online</h2>
@@ -218,7 +218,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </Container>
+     
       <Footer />
     </div>
   );

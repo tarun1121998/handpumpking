@@ -32,7 +32,7 @@ const ClientSays = () => {
         <h3>What our client says</h3>
         <p>Aliquam lorem ante, dapibus in, viverra quis</p>
       </div>
-      <div className='section-padding'>
+      
       <Carousel responsive={responsive}>
         <div>
           <div className="client-box">
@@ -93,7 +93,7 @@ const ClientSays = () => {
         </div>
      
       </Carousel>
-      </div>
+ 
     </div>
   )
 }

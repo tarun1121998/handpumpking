@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Nav from "../../directives/Header/Nav";
 import "./WelcomeScreen.css";
 import { Col, Container, Row } from "react-bootstrap";
@@ -9,12 +9,10 @@ import userSearch from "../../assets/userSearch.png";
 import handIcon from "../../assets/handIcon.png";
 import ComplaintIcon from "../../assets/ComplaintIcon.png";
 import dashboardIcon from "../../assets/dashboardIcon.png";
-import bannerImage1 from "../../assets/bannerImage1.png";
-import bannerImage2 from "../../assets/bannerImage2.png";
-import carouselImg3 from "../../assets/carouselImg3.jpg";
-import FeaturedCategory from "../../components/Featured-Category/FeaturedCategory";
+
+// import FeaturedCategory from "../../components/Featured-Category/FeaturedCategory";
 import FeaturedServices from "../../components/Featured-Services/FeaturedServices";
-import TopProvider from "../../components/Top-Provider/TopProvider";
+// import TopProvider from "../../components/Top-Provider/TopProvider";
 import HowWorks from "../../components/How-It-Works/HowWorks";
 import ClientSays from "../../components/Client-Says/ClientSays";
 import DownloadApp from "../../components/Download-App/DownloadApp";
@@ -23,42 +21,40 @@ import Carousel from "react-bootstrap/Carousel";
 import MapInfo from "../Map-Info/MapInfo";
 
 const WelcomeScreen = () => {
+  const [bannerImages, setBannerImages] = useState([]);
+
+  useEffect(() => {
+    fetch("https://handpumpking.digiatto.online/api/banner")
+      .then((response) => response.json())
+      .then((data) => {
+        const bannerImages = data.data.filter((item) => item.type === "Banner");
+        setBannerImages(bannerImages);
+      })
+      .catch((error) => console.error("Error fetching banners:", error));
+  }, []);
+
   return (
     <div>
       <Nav />
       {/* ---------------------- Carousel -------------------- */}
-
+<div className="banner-carousel">
       <Carousel>
-        <Carousel.Item>
-          <img className="carousel-img" src={bannerImage1} text="First slide" />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="carousel-img"
-            src={bannerImage2}
-            text="Second slide"
-          />
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="carousel-img" src={carouselImg3} text="Third slide" />
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item>
+        {bannerImages.map((banner) => (
+          <Carousel.Item key={banner.id}>
+            <img
+              className="carousel-img"
+              src={`https://handpumpking.digiatto.online${banner.image}`}
+            />
+          </Carousel.Item>
+        ))}
       </Carousel>
-
+      </div>
       {/* -------------------- Carousel End ---------------- */}
+
+      <div class="marquee">
+        <p>Scrolling Text Marquee - A Simple CSS Demonstration</p>
+    </div>
+
 
       <div className="section-padding">
         <div className="details-area">
@@ -199,14 +195,14 @@ const WelcomeScreen = () => {
       </div>
 
       {/* -------------- Featured Category ---------------- */}
-   
-        {/* <FeaturedCategory /> */}
 
-        <div className="section-padding">
-          <FeaturedServices />
-        </div>
+      {/* <FeaturedCategory /> */}
 
-   <Container>
+      <div className="section-padding">
+        <FeaturedServices />
+      </div>
+
+      <Container>
         <div className="section-padding">
           <HowWorks />
         </div>
@@ -214,18 +210,16 @@ const WelcomeScreen = () => {
         <div className="section-padding">
           <ClientSays />
         </div>
-          </Container>
-        <div className="section-padding">
-          <MapInfo/>
-        </div>
-       
-    
+      </Container>
       <div className="section-padding">
-          <DownloadApp />
-        </div>
-   
-        <Footer />
-    
+        <MapInfo />
+      </div>
+
+      <div className="section-padding">
+        <DownloadApp />
+      </div>
+
+      <Footer />
     </div>
   );
 };
