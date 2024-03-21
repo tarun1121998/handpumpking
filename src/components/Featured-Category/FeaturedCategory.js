@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import "./FeaturedCategory.css";
-import category1 from "../../assets/category1.jpg";
 import { Link } from "react-router-dom";
 
 const FeaturedCategory = () => {
@@ -20,21 +19,17 @@ const FeaturedCategory = () => {
   const renderCategory = () => {
     return categories.map((category) => {
       return (
-    <Link to="/ConsumerComplaint">  <div key={category.type} >
-          <a className="category-box">
-            <div>
-              <span>
-                {" "}
-                <i class="fa-solid fa-hammer"></i>
-              </span>
-              <h5>{category.name}</h5>
-            </div>
-            <div className="feature-overlay">
-              {/* <img src={category1} alt="img" /> */}
-            </div>
-          </a>
-        </div>
-        </Link>  
+        <Link to="/ConsumerComplaint">
+          {" "}
+          <div key={category.type}>
+            <a className="category-box">
+              <div>
+                <h5>{category.name}</h5>
+              </div>
+              <div className="feature-overlay"></div>
+            </a>
+          </div>
+        </Link>
       );
     });
   };
@@ -48,12 +43,8 @@ const FeaturedCategory = () => {
         </div>
 
         {/* -------------- Category Box --------- */}
-        
-            <div className="category-all-box">
-            {renderCategory()}
-            </div>
-           
-          
+
+        <div className="category-all-box">{renderCategory()}</div>
       </div>
     </div>
   );

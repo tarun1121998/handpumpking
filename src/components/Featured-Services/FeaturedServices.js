@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./FeaturedServices.css";
@@ -45,11 +45,14 @@ const FeaturedServices = () => {
 
   return (
     <div>
+      <Container>
       <div className="feature-service-head">
         <h3>Featured Services</h3>
         <p>Explore the greatest services. You won’t be disappointed.</p>
       </div>
-
+      </Container>
+<div className="service-all-area">
+      <Container>
       <Carousel responsive={responsive}>
         {services.map((service, index) => (
           <Link to="/ConsumerComplaint">
@@ -70,6 +73,8 @@ const FeaturedServices = () => {
           </Link>
         ))}
       </Carousel>
+      </Container>
+      </div>
     </div>
   );
 };

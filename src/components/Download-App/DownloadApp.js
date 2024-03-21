@@ -16,7 +16,7 @@ const DownloadApp = () => {
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 <h5>Scan the QR code to get the app now</h5>
-<img src={qrImage} className='qr-img' />
+
 <div className='app-links'>
     <img src={googlePlay} className='google-play'/>
     <img src={appleStore} className='apple-store'/>

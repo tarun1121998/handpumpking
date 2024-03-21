@@ -1,3 +1,5 @@
+
+
 .fetured-category-head h3{
   font-weight: 600;
   font-size: 40px;
@@ -30,21 +32,13 @@
     text-decoration: none;
     margin-right: 30px;
 }
+
 .category-box h5{
     font-weight: 600;
     font-size: 22px;
   
 }
-.category-box i{
-    background-color: rgb(210, 210, 210);
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    font-size: 25px;
-    vertical-align: middle;
-    padding: 10px ;
-    margin-bottom: 20px;
-}
+
 
 .category-box .feature-overlay {
     opacity: 0;

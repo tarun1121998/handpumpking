@@ -1,19 +1,19 @@
 .download-box{
-    height: 400px;
+    height: 320px;
     width: 100%;
     border-radius: 20px;
-    background-color: var(--dark-blue);
+    background-image: url(../../assets//downloadAppBg.png);
     color: white;
     margin-top: 200px;
 }
 .app-img img{
-    width: 100%;
+    width: 400px;
     height: auto;
-    margin-top: -70px;
+    margin-top: -50px;
 }
 .download-content{
     padding: 20px 40px;
-
+text-align: center;
 }
 .download-content h2{
     font-weight: 600;
@@ -22,13 +22,11 @@
     padding: 10px 0;
     line-height: 2;
 }
-.qr-img{
-    height: 100px;
-    width: 100px;
-}
+
 .app-links{
     display: flex;
-   
+   align-items: center;
+   justify-content: center;
 }
 .google-play{
   

@@ -199,17 +199,14 @@ const WelcomeScreen = () => {
       </div>
 
       {/* -------------- Featured Category ---------------- */}
-      <Container>
-        <FeaturedCategory />
+   
+        {/* <FeaturedCategory /> */}
 
         <div className="section-padding">
           <FeaturedServices />
         </div>
 
-        {/* <div className="section-padding">
-          <TopProvider />
-        </div> */}
-
+   <Container>
         <div className="section-padding">
           <HowWorks />
         </div>
@@ -217,13 +214,15 @@ const WelcomeScreen = () => {
         <div className="section-padding">
           <ClientSays />
         </div>
+          </Container>
         <div className="section-padding">
           <MapInfo/>
         </div>
-        <div className="section-padding">
+       
+    
+      <div className="section-padding">
           <DownloadApp />
         </div>
-      </Container>
    
         <Footer />
     

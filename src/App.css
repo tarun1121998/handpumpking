@@ -14,4 +14,7 @@ body{
   --purple : #4C40ED;
   --dark-grey : #465380;
 }
+a{
+  text-decoration: none;
+}
 
