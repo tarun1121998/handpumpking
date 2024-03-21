@@ -37,8 +37,10 @@ const WelcomeScreen = () => {
   return (
     <div>
       <Nav />
+      
       {/* ---------------------- Carousel -------------------- */}
 <div className="banner-carousel">
+     
       <Carousel>
         {bannerImages.map((banner) => (
           <Carousel.Item key={banner.id}>

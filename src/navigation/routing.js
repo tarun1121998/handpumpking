@@ -9,6 +9,7 @@ import RegisterOtp from "../components/RegisterOtp/RegisterOtp";
 import UserProfile from "../screens/User-Profile/UserProfile";
 import UserLogin from "../screens/User-Login/UserLogin";
 
+
 // ScrollToTop component
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -33,6 +34,7 @@ function NavRoutes() {
           <Route path="/registerOtp" element={<RegisterOtp/>}/>
           <Route path="/userprofile" element={<UserProfile/>}/>
           <Route path="/userlogin" element={<UserLogin/>}/>
+       
         </Routes>
       </BrowserRouter>
     </>
