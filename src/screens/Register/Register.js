@@ -65,20 +65,24 @@ const navigatepage =useNavigate()
       });
     });
   }, []);
+  
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
 
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+   
     try {
       const formDataToSend = new FormData();
 
       formDataToSend.append('phone', formData.phone);
 
+     
       const response = await fetch(
         "https://handpumpking.digiatto.online/api/user/register",
         {
@@ -155,6 +159,7 @@ const RegisterOtpVerify = async (e)=>{
 
 
 
+ 
   return (
     <div>
       <Nav />
@@ -219,6 +224,52 @@ const RegisterOtpVerify = async (e)=>{
                           onChange={handleInputChange}
                         ></input>
 
+
+                        <input
+                          type="text"
+                          placeholder="Enter Your country"
+                          className="form-control"
+                          name='country'
+                          value={formData.country}
+                          onChange={handleInputChange}
+                        ></input>
+
+                        <input
+                          type="text"
+                          placeholder="Enter Your city"
+                          className="form-control"
+                          name='city'
+                          value={formData.city}
+                          onChange={handleInputChange}
+                        ></input>
+
+                        <input
+                          type="text"
+                          placeholder="Enter Your zip code"
+                          className="form-control"
+                          name='zipcode'
+                          value={formData.zipcode}
+                          onChange={handleInputChange}
+                        ></input>
+                      </Col>
+                      <Col lg={6}>
+                        <input
+                          type="email"
+                          placeholder="Enter Your email"
+                          className="form-control"
+                          name='email'
+                          value={formData.email}
+                          onChange={handleInputChange}
+                        ></input>
+
+                        <input
+                          type="text"
+                          placeholder="Enter Your state"
+                          className="form-control"
+                          name='state'
+                          value={formData.state}
+                          onChange={handleInputChange}
+                        ></input>
                         <input
                           type="text"
                           placeholder="Enter Your state"
