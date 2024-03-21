@@ -7,7 +7,7 @@ import loginPageImg from "../../assets/loginPageImg.jpg"
 import Footer from "../../directives/Footer/Footer";
 
 const UserLogin = () => {
-  const navigatepage =useNavigate()
+  const navigatepage = useNavigate()
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -71,7 +71,7 @@ const UserLogin = () => {
     newOtp[index] = value;
     setOtp(newOtp);
     if (value !== "" && index < otp.length - 1) {
-     
+
       const nextInput = document.getElementById(`digit-${index + 2}`);
       if (nextInput) {
         nextInput.focus();
@@ -79,20 +79,20 @@ const UserLogin = () => {
     }
   };
 
-  const RegisterOtpVerify = async (e)=>{
+  const RegisterOtpVerify = async (e) => {
     const stageDetailsArray = otp.map(Number);
     const otpNumber = parseInt(stageDetailsArray.join(''), 10);
     console.log("Submitted OTP:", otpNumber);
-  
-  
+
+
     try {
       const formDataToSend = new FormData();
-  
-   
-      formDataToSend.append('phone_number',phone);
+
+
+      formDataToSend.append('phone_number', phone);
       formDataToSend.append('otp', otpNumber);
-     
-  
+
+
       const response = await fetch(
         "https://handpumpking.digiatto.online/api/user/otp_verify1",
         {
@@ -100,23 +100,23 @@ const UserLogin = () => {
           body: formDataToSend,
         }
       );
-  
-  
+
+
       if (!response.ok) {
         throw new Error("Network response was not ok: " + response.status);
       }
       const data = await response.json();
-  
+
       localStorage.setItem("username", data.data.name);
       localStorage.setItem("userid", data.data.id);
       localStorage.setItem("email", data.data.email);
-      localStorage.setItem("phoneNumber",data.data.phone_number);
+      localStorage.setItem("phoneNumber", data.data.phone_number);
       navigatepage('/')
       // localStorage.setItem("registeredUserData", JSON.stringify(formData));
       console.log("Form data submitted successfully", data);
-  
-  
-  
+
+
+
     } catch (error) {
       console.error("Error:", error);
     }
@@ -140,28 +140,28 @@ const UserLogin = () => {
                   <div className="login-fields">
                     <h4>Login Form</h4>
                     {/* <form> */}
-                      <input
-                        type="number"
-                        placeholder="Enter Your Phone"
-                        className="form-control"
-                        name="phone"
-                        onChange={(e) => setPhone(e.target.value)}
-                        value={phone}
-                      ></input>
+                    <input
+                      type="number"
+                      placeholder="Enter Your Phone"
+                      className="form-control"
+                      name="phone"
+                      onChange={(e) => setPhone(e.target.value)}
+                      value={phone}
+                    ></input>
 
-                      
 
-                      <div className="forgot-pass">
-                        <p>Forgot Password?</p>
-                      </div>
-                   
-                      {/* </form> */}
 
-                        <button type="submit" className="continue-login-btn"
-                         onClick={handleSubmit}>
-                          Continue
-                        </button>
-                      
+                    <div className="forgot-pass">
+                      <p>Forgot Password?</p>
+                    </div>
+
+                    {/* </form> */}
+
+                    <button type="submit" className="continue-login-btn"
+                      onClick={handleSubmit}>
+                      Continue
+                    </button>
+
                   </div>
                 </div>
               </div>
@@ -170,34 +170,34 @@ const UserLogin = () => {
         </div>
 
         <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title >Register Otp</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-        <form >
-        <div className="digit-group text-center" data-group-name="digits" data-autosubmit="false" autoComplete="off">
-        {otp.map((digit, index) => (
-          <input
-            key={index}
-            type="text"
-            id={`digit-${index + 1}`}
-            maxLength="1"
-            value={digit}
-            onChange={(e) => handleChange(index, e.target.value)}
-          />
-        ))}
-      </div>
-    </form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary"  onClick={RegisterOtpVerify}>
-            Save
-          </Button>
-        </Modal.Footer>
-      </Modal>
+          <Modal.Header closeButton>
+            <Modal.Title >Register Otp</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <form >
+              <div className="digit-group text-center" data-group-name="digits" data-autosubmit="false" autoComplete="off">
+                {otp.map((digit, index) => (
+                  <input
+                    key={index}
+                    type="text"
+                    id={`digit-${index + 1}`}
+                    maxLength="1"
+                    value={digit}
+                    onChange={(e) => handleChange(index, e.target.value)}
+                  />
+                ))}
+              </div>
+            </form>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+            <Button variant="primary" onClick={RegisterOtpVerify}>
+              Save
+            </Button>
+          </Modal.Footer>
+        </Modal>
       </Container>
       <Footer />
     </div>

@@ -63,19 +63,19 @@ const WelcomeScreen = () => {
       <div className="section-padding">
         <div className="details-area">
           <Row>
-            <Col lg={6}>
+            <Col lg={6} md={6}>
               <div className="detail-box-head">
                 <h3 className="blink-me">Details of total complaints</h3>
               </div>
               <div className="details-boxes">
                 <div className="detail-box-1">
                   <Row>
-                    <Col lg={4}>
+                    <Col lg={4} md={4}>
                       <div className="inbox-img">
                         <img src={inbox} alt="inbox"></img>
                       </div>
                     </Col>
-                    <Col lg={8}>
+                    <Col lg={8} md={8}>
                       <div className="details-text">
                         <h5>Total Registered Complaints</h5>
                         <p>3312</p>
@@ -86,12 +86,12 @@ const WelcomeScreen = () => {
 
                 <div className="detail-box-1">
                   <Row>
-                    <Col lg={4}>
+                    <Col lg={4} md={4}>
                       <div className="inbox-img">
                         <img src={outbox} alt="inbox"></img>
                       </div>
                     </Col>
-                    <Col lg={8}>
+                    <Col lg={8} md={8}>
                       <div className="details-text">
                         <h5>Total resolved complaints</h5>
                         <p>3312</p>
@@ -104,12 +104,12 @@ const WelcomeScreen = () => {
               <div className="details-boxes2">
                 <div className="detail-box-2">
                   <Row>
-                    <Col lg={4}>
+                    <Col lg={4} md={4}>
                       <div className="inbox-img">
                         <img src={userIcon} alt="inbox"></img>
                       </div>
                     </Col>
-                    <Col lg={8}>
+                    <Col lg={8} md={8}>
                       <div className="details-text">
                         <h5>Online Users</h5>
                         <p>3312</p>
@@ -120,12 +120,12 @@ const WelcomeScreen = () => {
 
                 <div className="detail-box-1">
                   <Row>
-                    <Col lg={4}>
+                    <Col lg={4} md={4}>
                       <div className="inbox-img">
                         <img src={userSearch} alt="inbox"></img>
                       </div>
                     </Col>
-                    <Col lg={8}>
+                    <Col lg={8} md={8}>
                       <div className="details-text">
                         <h5>Complaint Status</h5>
                         <p>3312</p>
@@ -137,7 +137,7 @@ const WelcomeScreen = () => {
             </Col>
 
             {/* ------------------ Detail Cards ----------------- */}
-            <Col lg={6}>
+            <Col lg={6} md={6}>
               <div className="details-boxes">
                 <div className="detail-card-1">
                   <div className="inbox-card-icon">

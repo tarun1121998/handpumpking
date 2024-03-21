@@ -167,15 +167,17 @@ const RegisterOtpVerify = async (e)=>{
         <Container>
           <div className="register-area">
             <Row>
-              <Col lg={5}>
+              <Col lg={5} md={5}>
+                <div>
                 <img src={registerImg} className="register-img" alt="Registration"></img>
+                </div>
               </Col>
-              <Col lg={7}>
+              <Col lg={7} md={7}>
                 <div className="registration-fields">
                   <h4>Registration Form</h4>
                   <form onSubmit={handleSubmit}>
                     <Row>
-                      <Col lg={6}>
+                      <Col lg={6} >
                         <input
                           type="text"
                           placeholder="Enter Your Name"
