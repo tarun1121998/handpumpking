@@ -17,6 +17,8 @@
 .footer-list ul li{
     list-style: none;
     padding: 6px 0;
+    color: white;
+    cursor: pointer;
 }
 .footer-list ul li i{
    color: white;
@@ -25,6 +27,7 @@
 .social-links i{
     font-size: 22px;
     padding: 12px;
+    cursor: pointer;
 }
 .copyright-text{
     font-weight: 600;

@@ -10,7 +10,7 @@ const MapInfo = () => {
       <Container>
         <Row>
           {/* ----- Map Image ---- */}
-          <Col lg={6}>
+          <Col lg={6} md={6}>
             <div className="mp-map" style={{ visibility: "visible", animationName: "bounceInLeft" }}>
               <h3> Map Of Madhya Pradesh</h3>
               <div className="map-img">
@@ -21,7 +21,7 @@ const MapInfo = () => {
 
           
           {/* --------- Map Details ------- */}
-          <Col lg={6}>
+          <Col lg={6} md={6}>
             <div className="map-details">
               <h3>Satisfactory Solution</h3>
             </div>

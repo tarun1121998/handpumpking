@@ -23,4 +23,15 @@ color: var(--dark-blue);}
 }
 .service-card-area{
     width: 320px;
+    
+}
+
+
+/* -------------- Responsive Css -------------- */
+
+@media screen and (max-width: 1014px){
+    .service-card-area{
+        width: 280px;
+        height: 300px;
+    }
 }

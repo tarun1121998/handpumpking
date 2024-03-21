@@ -1,69 +1,70 @@
-.login-bg{
-   background-color: white;
-    height: auto;
-    width: 100%;
-    text-align: center;
-    margin-top: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.login-page-image{
-    width: 100%;
- 
-}
-.login-page-image img{
+.login-bg {
+  background-color: white;
+  height: auto;
   width: 100%;
- 
+  text-align: center;
+  margin-top: 80px;
 }
 
-.login-area{
-  
-    margin-top: 80px;
-    height: auto;
-    width: 100%;  
+.login-page-image img {
+  width: 490px;
+  height: 450px;
 }
-.login-fields{
-    text-align: center;
-  
+
+.login-area {
+  margin-top: 80px;
+  height: auto;
+  width: 100%;
+  padding: 0 50px;
 }
-.login-fields h4{
-    padding: 40px 0 0 0;
-    color: var(--dark-blue);
-    font-weight: 600;
-    font-size: 30px;
-    margin-bottom: 20px;
+.login-fields {
+  text-align: center;
 }
-.login-fields form{
-    padding: 60px;
-    border-radius: 10px;
-   
+.login-fields h4 {
+  padding: 40px 0 0 0;
+  color: var(--dark-blue);
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 20px;
 }
-.login-fields form input{
-    width: 100%;
-    height: 40px;
-    background-color: hsla(0, 0%, 100%, 0.956);
-    border: 1px solid rgb(124, 123, 123);
-    border-radius: 10px;
-    margin-bottom: 25px;
-    font-size: 14px;
-    color: #181717;
-    padding: 0 15px;
+.login-fields form {
+  padding: 30px 10px 30px 50px;
+  border-radius: 10px;
 }
-.continue-login-btn{
-    width: 100%;
-    background-color: rgb(255, 208, 0);
-    color: var(--dark-blue);
-    padding: 7px;
-    border: none;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 20px;
-    box-shadow: rgba(0, 0, 0, 0.82) 0px 3px 6px, rgba(0, 0, 0, 0.113) 0px 3px 6px;
-    
+.login-fields form input {
+  width: 100%;
+  height: 40px;
+  background-color: hsla(0, 0%, 100%, 0.956);
+  border: 1px solid rgb(124, 123, 123);
+  border-radius: 10px;
+  margin-bottom: 25px;
+  font-size: 14px;
+  color: #181717;
+  padding: 0 15px;
+}
+.continue-login-btn {
+  width: 100%;
+  background-color: rgb(255, 208, 0);
+  color: var(--dark-blue);
+  padding: 4px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  box-shadow: rgba(0, 0, 0, 0.82) 0px 3px 6px, rgba(0, 0, 0, 0.113) 0px 3px 6px;
+}
+.forgot-pass p {
+  color: var(--dark-blue);
+  font-weight: 600;
+}
+
+
+/* ------------- Responsive Css ---------- */
+
+@media screen and (max-width: 992px){
+.login-page-image img {
+    width: 390px;
+    height: 350px;
   }
-  .forgot-pass p{
-    color: var(--dark-blue);
-    font-weight: 600;
-  }
+
+}

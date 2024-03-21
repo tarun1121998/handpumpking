@@ -19,12 +19,12 @@ const UserProfile = () => {
         <Container>
         <div className="profile-banner">
           <Row>
-            <Col lg={5}>
+            <Col lg={5} md={5}>
               <div className="profile-blue-bg">
                 <img src={UserProfileImg} alt="user-profile"></img>
               </div>
             </Col>
-            <Col lg={7}>
+            <Col lg={7} md={7}>
               <div className="profile-white-bg">
                 <h3>User Profile</h3>
                 <p>
@@ -66,10 +66,10 @@ const UserProfile = () => {
 
                       <div className="profile-info">
                         <Row>
-                          <Col lg={2}>
+                          <Col lg={2} md={2}>
                             <i class="fa-solid fa-phone-volume"></i>{" "}
                           </Col>{" "}
-                          <Col lg={10}>
+                          <Col lg={10} md={10}>
                             <p>{userphonenumber}</p>
                           </Col>{" "}
                         </Row>

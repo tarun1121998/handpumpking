@@ -38,16 +38,17 @@ const UserLogin = () => {
     <div>
       <Nav />
       <Container>
+<div className="section-padding">
       <div className="login-bg">
         <Row>
-          <Col lg={5}>
+          <Col lg={5} md={5}>
             <div className="section-padding">
               <div className="login-page-image">
                 <img src={loginPageImg} ></img>
               </div>
             </div>
           </Col>
-          <Col lg={7}>
+          <Col lg={7} md={7}>
             <div className="section-padding">
               <div className="login-area">
                 <div className="login-fields">
@@ -60,7 +61,6 @@ const UserLogin = () => {
                       onChange={(e) => setPhone(e.target.value)}
                       value={phone}
                     ></input>
-                    <p>dghhgfghgfgh</p>
 
                     {/* <input
                 type="email"
@@ -95,6 +95,7 @@ const UserLogin = () => {
             </div>
           </Col>
         </Row>
+      </div>
       </div>
       </Container>
       <Footer/>

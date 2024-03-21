@@ -6,7 +6,7 @@
    justify-content: center;
 }
 .profile-banner{
-    height: 100vh;
+    height: auto;
     width: 100%;
     background-color: white;
 }
@@ -15,7 +15,7 @@
     width: 420px;
 }
 .profile-white-bg{
-    height: 100vh;
+    height: auto;
     width: 100%;
     text-align: center;
 }
@@ -34,23 +34,26 @@ padding: 40px 0 0 0;
 .profile-detail{
     margin-top: 40px;
     text-align: center;
+    padding: 0 30px;
 }
 .profile-info{
     display: flex;
     align-items: center;
-    padding-left: 20px;
+    padding-left: 10px;
     background-color: rgba(205, 205, 205, 0.42);
     height: 50px;
-    width: 400px;
+    width: 100%;
     border-radius: 10px;
-    margin: 20px 10px;
+    margin: 20px 0;
     
 }
 .profile-info i {
-    font-size: 22px;
+    font-size: 17px;
     margin-right: 20px;
     padding: 15px;
-    color: var(--dark-blue);
+    color: white;
+    background-color: var(--dark-blue);
+    border-radius: 50%;
 }
 .profile-info p{
     font-weight: 600;
@@ -67,4 +70,16 @@ padding: 40px 0 0 0;
     width: 240px;
     border-radius: 10px;
     margin-bottom: 30px;
+}
+
+/* ------------ Responsive Css ------------ */
+
+@media screen and (max-width: 992px) {
+    .profile-blue-bg img{
+        height: 350px;
+        width: 100%;
+    }
+    .profile-info{
+        height: 40px;
+    }
 }

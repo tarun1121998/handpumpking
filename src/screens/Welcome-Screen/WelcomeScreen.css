@@ -10,7 +10,11 @@
     font-weight: 600;
 }
 .banner-carousel{
-  margin-top: 30px;
+  margin-top: 60px;
+  
+}
+.banner-carousel img{
+  height: 340px;
 }
 
 .carousel-img{
@@ -97,10 +101,10 @@ padding-bottom: 20px;
   
   @-webkit-keyframes blink-animation {
     0%, 39.9% {
-      opacity: 1; /* Visible */
+      opacity: 1; 
     }
     50%, 100% {
-      opacity: 0; /* Invisible */
+      opacity: 0; 
     }
   }
 .details-area{
@@ -184,4 +188,31 @@ font-weight: 600;
 .inbox-icon{
     height: 60px;
     width: 60px;
+}
+
+
+/* -------------- Responsive Css -------------- */
+
+@media screen and (max-width: 992px){
+  .detail-card-1{
+    height: 120px;
+   width: 180px;
+}
+.detail-card-2{
+  height: 120px;
+  width: 200px;
+}
+.detail-card-3{
+  height: 120px;
+  width: 200px;
+}
+.detail-card-4{
+  height: 120px;
+  width: 200px;
+}
+
+.banner-carousel img{
+  height: 280px;
+}
+
 }

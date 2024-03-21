@@ -5,8 +5,8 @@
 }
 
 .work-box{
-    height: 300px;
-    width: 300px;
+   
+    width: 100%;
     box-shadow: rgba(0, 0, 0, 0.087) 0px 3px 6px, rgba(0, 0, 0, 0.109) 0px 3px 6px;
     text-align: center;
     padding: 30px;
